@@ -4,6 +4,11 @@ metadata:
   name: nginx-chaos
   namespace: default
 spec:
+  components:
+    runner:
+      # secret name for the runner image, if using private registry
+      imagePullSecrets:
+      - name: regcred
   # It can be active/stop
   engineState: 'active'
   #ex. values: ns1:name=percona,ns2:run=nginx  
@@ -17,6 +22,9 @@ spec:
     - name: disk-fill
       spec:
         components:
+          # secret name for the experiment image, if using private registry
+          imagePullSecrets:
+          - name: regcred
           env:
             - name: TOTAL_CHAOS_DURATION
               value: '60' 
@@ -32,3 +40,6 @@ spec:
             # Default set to docker container path
             - name: CONTAINER_PATH
               value: '/var/lib/docker/containers'
+
+            - name: LIB_IMAGE
+              value: 'chaosnative/go-runner:2.8.0'
