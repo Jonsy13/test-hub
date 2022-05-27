@@ -46,7 +46,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list"]
-    image: "jonsy13/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
