@@ -58,9 +58,8 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "chaosnative/go-runner:2.8.0"
+    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
-    imagePullSecret: regcred
     args:
     - -c
     - ./experiments -name disk-fill
@@ -106,7 +105,7 @@ spec:
       value: ''
 
     - name: LIB_IMAGE
-      value: 'litmuschaos/go-runner:2.8.0'
+      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0'
 
     # Provide the container runtime path
     # Default set to docker container path

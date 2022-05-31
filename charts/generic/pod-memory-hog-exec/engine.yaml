@@ -4,6 +4,13 @@ metadata:
   name: nginx-chaos
   namespace: default
 spec:
+  components:
+    runner:
+      # secret name for the runner image, if using private registry
+      imagePullSecrets:
+      - name: regcred
+      runnerAnnotations:
+        sidecar.istio.io/inject: "false"
   # It can be active/stop
   engineState: 'active'
   appinfo:
@@ -14,7 +21,12 @@ spec:
   experiments:
     - name: pod-memory-hog-exec
       spec:
-        components:
+          components:
+            # secret name for the experiment image, if using private registry
+            experimentImagePullSecrets:
+            - name: regcred
+            experimentAnnotations:
+              sidecar.istio.io/inject: "false"
           env:
             - name: TOTAL_CHAOS_DURATION
               value: '60' # in seconds

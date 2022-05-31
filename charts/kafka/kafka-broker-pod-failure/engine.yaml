@@ -4,6 +4,13 @@ metadata:
   name: kafka-chaos
   namespace: default
 spec:
+  components:
+    runner:
+      # secret name for the runner image, if using private registry
+      imagePullSecrets:
+      - name: regcred
+      runnerAnnotations:
+        sidecar.istio.io/inject: "false"
   # It can be active/stop
   engineState: 'active'
   #ex. values: ns1:name=percona,ns2:run=nginx 
@@ -16,7 +23,10 @@ spec:
   experiments:
     - name: kafka-broker-pod-failure
       spec:
-        components:  
+        components:
+          # secret name for the experiment image, if using private registry
+          experimentImagePullSecrets:
+          - name: regcred  
           env:
             # set chaos duration (in sec) as desired
             - name: TOTAL_CHAOS_DURATION

@@ -9,6 +9,8 @@ spec:
       # secret name for the runner image, if using private registry
       imagePullSecrets:
       - name: regcred
+      runnerAnnotations:
+        sidecar.istio.io/inject: "false"
   appinfo:
     appns: 'default'
     applabel: 'app=nginx'
@@ -19,10 +21,12 @@ spec:
   experiments:
     - name: pod-delete
       spec:
-        components:
-          # secret name for the experiment image, if using private registry
-          experimentImagePullSecrets:
-          - name: regcred
+          components:
+            # secret name for the experiment image, if using private registry
+            experimentImagePullSecrets:
+            - name: regcred
+            experimentAnnotations:
+              sidecar.istio.io/inject: "false"
           env:
             # set chaos duration (in sec) as desired
             - name: TOTAL_CHAOS_DURATION
@@ -39,6 +43,3 @@ spec:
              ## percentage of total pods to target
             - name: PODS_AFFECTED_PERC
               value: ''
-
-            - name: LIB_IMAGE
-              value: 'chaosnative/go-runner:2.8.0'

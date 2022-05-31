@@ -10,6 +10,8 @@ spec:
       # secret name for the runner image, if using private registry
       imagePullSecrets:
       - name: regcred
+      runnerAnnotations:
+        sidecar.istio.io/inject: "false"
   # It can be active/stop
   engineState: 'active'
   appinfo: 
@@ -21,10 +23,12 @@ spec:
   experiments:
     - name: pod-network-loss
       spec:
-        components:
-          # secret name for the experiment image, if using private registry
-          experimentImagePullSecrets:
-          - name: regcred
+          components:
+            # secret name for the experiment image, if using private registry
+            experimentImagePullSecrets:
+            - name: regcred
+            experimentAnnotations:
+              sidecar.istio.io/inject: "false"
           env:
             - name: TOTAL_CHAOS_DURATION
               value: '60' # in seconds
@@ -45,7 +49,4 @@ spec:
             ## percentage of total pods to target
             - name: PODS_AFFECTED_PERC
               value: ''
-
-            - name: LIB_IMAGE
-              value: 'chaosnative/go-runner:2.8.0'
             

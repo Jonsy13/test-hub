@@ -9,6 +9,8 @@ spec:
       # secret name for the runner image, if using private registry
       imagePullSecrets:
       - name: regcred
+      runnerAnnotations:
+        sidecar.istio.io/inject: "false"
   # It can be active/stop
   engineState: 'active'
   #ex. values: ns1:name=percona,ns2:run=nginx  
@@ -21,10 +23,12 @@ spec:
   experiments:
     - name: disk-fill
       spec:
-        components:
-          # secret name for the experiment image, if using private registry
-          imagePullSecrets:
-          - name: regcred
+          components:
+            # secret name for the experiment image, if using private registry
+            experimentImagePullSecrets:
+            - name: regcred
+            experimentAnnotations:
+              sidecar.istio.io/inject: "false"
           env:
             - name: TOTAL_CHAOS_DURATION
               value: '60' 
@@ -40,6 +44,3 @@ spec:
             # Default set to docker container path
             - name: CONTAINER_PATH
               value: '/var/lib/docker/containers'
-
-            - name: LIB_IMAGE
-              value: 'chaosnative/go-runner:2.8.0'
