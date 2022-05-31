@@ -58,7 +58,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -93,7 +93,7 @@ spec:
 
     ## It is used in pumba lib only    
     - name: LIB_IMAGE
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0'  
+      value: 'chaosnative/go-runner:2.8.0'  
 
     ## It is used in pumba lib only    
     - name: STRESS_IMAGE
@@ -187,7 +187,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -234,7 +234,7 @@ spec:
       value: ''
 
     - name: LIB_IMAGE
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0'
+      value: 'chaosnative/go-runner:2.8.0'
 
     # Provide the container runtime path
     # Default set to docker container path
@@ -314,7 +314,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -331,7 +331,7 @@ spec:
 
     # provide lib image
     - name: LIB_IMAGE
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0' 
+      value: 'chaosnative/go-runner:2.8.0' 
 
     - name: TC_IMAGE
       value: 'gaiadocker/iproute2'
@@ -457,7 +457,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     args:
       - -c
       - ./experiments -name pod-dns-error
@@ -469,7 +469,7 @@ spec:
 
       # provide lib image
       - name: LIB_IMAGE
-        value: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+        value: "chaosnative/go-runner:2.8.0"
 
       - name: TOTAL_CHAOS_DURATION
         value: "60" # in seconds
@@ -562,7 +562,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -602,7 +602,7 @@ spec:
 
     # provide lib image
     - name: LIB_IMAGE
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0' 
+      value: 'chaosnative/go-runner:2.8.0' 
 
     ## percentage of total nodes to target
     - name: NODES_AFFECTED_PERC
@@ -681,7 +681,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -715,7 +715,7 @@ spec:
 
       ## It is used in pumba lib only    
       - name: LIB_IMAGE
-        value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0'
+        value: 'chaosnative/go-runner:2.8.0'
 
       ## It is used in pumba lib only    
       - name: STRESS_IMAGE
@@ -797,7 +797,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -911,7 +911,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -925,7 +925,7 @@ spec:
 
     # provide lib image
     - name: LIB_IMAGE
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0' 
+      value: 'chaosnative/go-runner:2.8.0' 
 
     - name: NETWORK_INTERFACE
       value: 'eth0'
@@ -1050,7 +1050,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -1103,7 +1103,7 @@ spec:
       value: ''
 
     - name: LIB_IMAGE  
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0' 
+      value: 'chaosnative/go-runner:2.8.0' 
 
     ## it defines the sequence of chaos execution for multiple target pods
     ## supported values: serial, parallel
@@ -1166,7 +1166,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -1246,7 +1246,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -1332,7 +1332,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -1357,7 +1357,7 @@ spec:
 
     # provide lib image
     - name: LIB_IMAGE
-      value: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+      value: "chaosnative/go-runner:2.8.0"
 
     # ENTER THE TARGET NODE NAME
     - name: TARGET_NODE
@@ -1440,7 +1440,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -1454,7 +1454,7 @@ spec:
 
     # provide lib image
     - name: LIB_IMAGE
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0' 
+      value: 'chaosnative/go-runner:2.8.0' 
 
     - name: NETWORK_INTERFACE
       value: 'eth0'
@@ -1580,7 +1580,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -1689,7 +1689,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -1796,7 +1796,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     args:
       - -c
       - ./experiments -name pod-dns-spoof
@@ -1808,7 +1808,7 @@ spec:
 
       # provide lib image
       - name: LIB_IMAGE
-        value: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+        value: "chaosnative/go-runner:2.8.0"
 
       - name: TOTAL_CHAOS_DURATION
         value: "60" # in seconds
@@ -1897,7 +1897,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -1949,7 +1949,7 @@ spec:
 
     # provide lib image
     - name: LIB_IMAGE
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0' 
+      value: 'chaosnative/go-runner:2.8.0' 
 
     ## percentage of total nodes to target
     - name: NODES_AFFECTED_PERC
@@ -2027,7 +2027,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -2069,7 +2069,7 @@ spec:
       value: ''
 
     - name: LIB_IMAGE
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0'
+      value: 'chaosnative/go-runner:2.8.0'
 
     # provide the name of container runtime
     # for litmus LIB, it supports docker, containerd, crio
@@ -2164,7 +2164,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -2259,7 +2259,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -2287,7 +2287,7 @@ spec:
 
     # provide lib image
     - name: LIB_IMAGE
-      value: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+      value: "chaosnative/go-runner:2.8.0"
 
     # ENTER THE TARGET NODE NAME
     - name: TARGET_NODE
@@ -2363,7 +2363,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list","patch"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -2535,7 +2535,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list","patch","update"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -2622,7 +2622,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -2665,7 +2665,7 @@ spec:
 
     # provide lib image
     - name: LIB_IMAGE
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0' 
+      value: 'chaosnative/go-runner:2.8.0' 
 
     ## percentage of total nodes to target
     - name: NODES_AFFECTED_PERC
@@ -2744,7 +2744,7 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines","chaosexperiments","chaosresults"]
         verbs: ["create","list","get","patch","update","delete"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -2796,7 +2796,7 @@ spec:
 
       # provide lib image
       - name: LIB_IMAGE
-        value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0'
+        value: 'chaosnative/go-runner:2.8.0'
 
       ## provide the cluster runtime
       - name: CONTAINER_RUNTIME
@@ -2867,7 +2867,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c

@@ -46,7 +46,7 @@ spec:
       - apiGroups: [""]
         resources: ["nodes"]
         verbs: ["get","list"]
-    image: "artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0"
+    image: "chaosnative/go-runner:2.8.0"
     imagePullPolicy: Always
     args:
     - -c
@@ -98,7 +98,7 @@ spec:
 
     # provide lib image
     - name: LIB_IMAGE
-      value: 'artifactory.sdlc.ctl.gcp.db.com/dkr-public-local/dkr-io/chaosnative/go-runner:2.8.0' 
+      value: 'chaosnative/go-runner:2.8.0' 
 
     ## percentage of total nodes to target
     - name: NODES_AFFECTED_PERC
